@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        h1{
+            text-align: center;
+        }
+        .blog-post {
+            background: #1E1E2E;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        .blog-post h2 {
+            margin-bottom: 10px;
+        }
+        .read-more {
+            color: #6c63ff;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .full-content {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Jobs Blog</h1>
+        
+        <div class="blog-post">
+            <h2>Best Remote Jobs in 2025</h2>
+            <p>Looking for remote jobs? Here are the top opportunities this year...</p>
+            <span class="read-more" onclick="toggleContent(this)">Read More</span>
+            <p class="full-content">With the rise of remote work, companies are offering various roles like software development, content writing, and customer support...</p>
+        </div>
+        
+        <div class="blog-post">
+            <h2>How to Prepare for Your Dream Job</h2>
+            <p>Landing your dream job requires a strategy. Follow these tips...</p>
+            <span class="read-more" onclick="toggleContent(this)">Read More</span>
+            <p class="full-content">1. Update your resume. 2. Build a strong LinkedIn profile. 3. Practice interview questions. 4. Gain relevant skills...</p>
+        </div>
+        
+        <div class="blog-post">
+            <h2>Freelancing vs Full-Time Job: Which is Better?</h2>
+            <p>Is freelancing better than a full-time job? Here’s a comparison...</p>
+            <span class="read-more" onclick="toggleContent(this)">Read More</span>
+            <p class="full-content">Freelancing offers flexibility but comes with income instability. A full-time job provides job security but may lack freedom...</p>
+        </div>
+        <div class="blog-post">
+            <h2>How to Land Your First Freelance Job</h2>
+            <p>Breaking into freelancing can be tough, but with the right strategies, you can secure your first job quickly...</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+
+        <div class="blog-post">
+            <h2>Top 5 High-Paying Remote Jobs in 2025</h2>
+            <p>With the rise of remote work, these five job roles offer great salaries and flexibility...</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+
+        <div class="blog-post">
+            <h2>Best Platforms to Find Freelance Work</h2>
+            <p>Whether you are a writer, developer, or designer, these platforms can help you get consistent work...</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(element) {
+            let fullContent = element.nextElementSibling;
+            if (fullContent.style.display === "none" || fullContent.style.display === "") {
+                fullContent.style.display = "block";
+                element.innerText = "Read Less";
+            } else {
+                fullContent.style.display = "none";
+                element.innerText = "Read More";
+            }
+        }
+    </script>
+</body>
+</html>

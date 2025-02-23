@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: rgba(222, 250, 239, 0.428);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 24px;
+            font-family: cursive;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .header a {
+            color: rgb(255, 187, 0);
+            text-decoration: none;
+            font-size: 18px;
+            margin-left: 15px;
+        }
+
+        /* Form Container */
+        .fill {
+            border: 2px solid black;
+            border-radius: 20px;
+            background: rgba(173, 181, 220, 0.9);
+            width: 350px;
+            max-width: 90%;
+            padding: 20px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 80px;
+            background-image: url("maxresdefault.jpg"); /* Update Image Path */
+            background-size: cover;
+            background-position: center;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        /* Button */
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(159, 84, 246);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+       
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .fill {
+                width: 80%;
+            }
+            .header {
+                font-size: 20px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .fill {
+                width: 95%;
+                padding: 15px;
+            }
+            .header {
+                font-size: 18px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header">
+        <a href="signUp.html">Sign Up</a> Sign In
+    </div>
+
+    <form class="fill">
+        <p><b>Name</b></p>
+        <input type="text" placeholder="Enter Your Name">
+
+        <p><b>Mobile Number</b></p>
+        <input type="tel" placeholder="Enter Your Mobile Number">
+       
+
+        <p><b>Password</b></p>
+        <input type="password" placeholder="Create Password">
+
+        <button class="btn">Sign In</button>
+    </form>
+
+</body>
+</html>

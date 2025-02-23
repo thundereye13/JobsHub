@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobsHub.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+       
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #F8F9FA;
+        }
+
+       
+        .sidebar {
+            width: 60px;
+            height: 100vh;
+            background-color: #1E1E2E; 
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transition: width 0.3s ease;
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .sidebar.expanded {
+            width: 250px;
+            overflow-y: auto;
+        }
+
+       
+        .sidebar.expanded::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .sidebar.expanded::-webkit-scrollbar-thumb {
+            background: #505050;
+            border-radius: 5px;
+        }
+
+        
+        .menu-btn {
+            font-size: 20px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        
+        ul {
+            list-style: none;
+            width: 100%;
+        }
+
+        ul li {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        ul li i {
+            margin-right: 10px;
+        }
+
+        ul li span {
+            display: none;
+        }
+
+        .sidebar.expanded ul li span {
+            display: inline;
+        }
+
+        ul li:hover {
+            background-color: #303030;
+            border-radius: 5px;
+        }
+
+        hr {
+            border: 0.5px solid #505050;
+            margin: 10px 0;
+        }
+
+      
+        .tophead {
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: #1E1E2E; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+            height: 8vh;
+            width: 100vw;
+            z-index: 0;
+        }
+
+        .web {
+            font-family: cursive;
+            color: rgb(255, 255, 255); 
+            font-size: 24px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+       
+        .join {
+            background-color: #4CAF50; 
+            color: white;
+            border-radius: 9px;
+            cursor: pointer;
+            padding: 5px 15px;
+            font-weight: bold;
+            border: none;
+            position: absolute;
+            right: 20px; 
+        }
+
+        .join:hover {
+            background-color: #357A38;
+        }
+
+       
+        .main {
+            padding-top: 10vh;
+            text-align: center;
+        }
+
+        h2 {
+            color: rgb(159, 84, 246); 
+            margin-bottom: 5px;
+        }
+
+       
+        .search {
+            width: 200px;
+            border: 2px solid #9B5DE5;
+            border-radius: 10px 0 0 10px;
+            padding: 5px;
+        }
+
+        .searchbtn {
+            background-color: #BB86FC;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 0 10px 10px 0;
+            cursor: pointer;
+        }
+
+        .searchbtn:hover {
+            background-color: #9B5DE5;
+        }
+
+        
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .service-box {
+            color: black ;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+        }
+
+        .service-box img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .view-more {
+            margin-top: 20px;
+            color: #6c63ff;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+        }
+       
+        footer {
+            background-color: #1E1E2E;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        a{
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="sidebar" onclick="toggleMenu()">
+        <button class="menu-btn">☰</button>
+        <ul>
+            <li><i>🏠</i> <span><a href="Home.html">Home</a></span></li>
+            <li><i>👤</i> <span><a href="">Profile</a></span></li>
+            <li><i>🏢</i> <span><a href="JobsType.html">Job Types</a></span></li>
+            <li><i>🗒️</i> <span><a href="blogs.html">Blogs</a></span></li>
+            <li><i>🖥️</i> <span><a href="TrendingOpportunity.html">Trending Opportunities</a></span></li>
+            <hr>
+            <li><i>🤝</i> <span><a href="Help&Support.html">Help & Support</a></span></li>
+            <li><i>📞</i> <span><a href="Contact.html">Contact Us</a></span></li>
+        </ul>
+    </div>
+
+
+    <header class="tophead">
+        <h1 class="web">JOBS HUB</h1>
+        <a href="/signUp.html"><button class="join">Join</button></a>
+    </header>
+
+   
+    <main class="main">
+        <h2>Freelance Marketplace,</h2>
+        <h2>Remote Work opportunities,</h2>
+        <h2>Flexible, Project-based employment</h2>
+        <br><br>
+        <form onsubmit="return searchJobs()">
+            <input id="search" class="search" type="search" placeholder="Finding Free Jobs">
+            <button type="submit" class="searchbtn">Search</button>
+        </form>
+        <br><br><br>
+    </main>
+    <div class="services">
+        <a href="PG&TH.html">
+        <div class="service-box">
+            <img src="programming_icon.png" alt="Programming & Tech">
+            <p>Programming & Tech</p>
+        </div></a>
+        <a href="Business.html">
+        <div class="service-box">
+            <img src="business_icon.png" alt="Business">
+            <p>Business</p>
+        </div></a>
+        <a href="DigitalMR.html">
+        <div class="service-box">
+            <img src="marketing_icon.png" alt="Digital Marketing">
+            <p>Digital Marketing</p>
+        </div></a>
+        <a href="W&T.html">
+        <div class="service-box">
+            <img src="translation_icon.png" alt="Writing & Translation">
+            <p>Writing & Translation</p>
+        </div></a>
+        <a href="AIservices.html">
+        <div class="service-box">
+            <img src="ai_icon.png" alt="AI Services">
+            <p>AI Services</p>
+        </div></a>
+        <a href="WebDev.html">
+        <div class="service-box">
+            <img src="web_icon.png" alt="Website Development">
+            <p>Website Development</p>
+        </div></a>
+    </div>
+
+    
+    <footer>
+        <h3>JOBS HUB</h3>
+        <p>copyright &copy; Jobs Hub. All rights Reserved.</p>
+        <p>JOBS HUB is Powered by freelancing</p>
+    </footer>
+
+    
+    <script>
+        function toggleMenu() {
+            let sidebar = document.querySelector(".sidebar");
+            sidebar.classList.toggle("expanded");
+        }
+    </script>
+    
+    
+    <script>
+        function searchJobs() {
+            let query = document.getElementById("search").value.trim().toLowerCase();
+    
+            let jobPages = {
+                "programming": "PG&TH.html",
+                "tech": "PG&TH.html",
+                "business": "Business.html",
+                "digital marketing": "DigitalMR.html",
+                "marketing": "DigitalMR.html",
+                "writing": "W&T.html",
+                "translation": "W&T.html",
+                "ai": "AIservices.html",
+                "artificial intelligence": "AIservices.html",
+                "web development": "WebDev.html",
+                "website development": "WebDev.html",
+                "blogs":"Blogs.html",
+                "blog":"Blogs.html",
+                "trending opportunities":"TrendingOpportunity.html",
+                "trending":"TrendingOpportunity.html",
+                "new opportunities":"TrendingOpportunity.html",
+                "Trending":"TrendingOpportunity.html",
+                "opportunities":"TrendingOpportunity.html",
+                "Opportunities":"TrendingOpportunity.html",
+
+            };
+    
+            for (let key in jobPages) {
+                if (query.includes(key)) {
+                    window.location.href = jobPages[key];
+                    return false; 
+                }
+            }
+    
+            alert("No jobs found for: " + query);
+            return false; 
+        }
+    </script>
+
+</body>
+</html>
